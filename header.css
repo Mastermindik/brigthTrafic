@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.container {
+    width: min(95%, 70rem);
+    margin: 0 auto;
+}
+
+.header {
+    padding: 0.5rem 0;
+    background: #000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .container .logo {
+    font-size: 2.5rem;
+}
+
+.header .container .search {
+    padding: .4rem .4rem .4rem 1.3rem;
+
+    flex: 0 0 20rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 2rem;
+    background: #fff;
+}
+
+.header .container .search .input {
+    flex-grow: 1;
+    border: none;
+}
+
+.header .container .search .input:focus {
+    outline: none;
+}
+
+.header .container .search .icon {
+    padding: 0.3rem 1rem;
+    display: flex;
+    border: none;
+    border-radius: 2rem;
+    background: #000;
+    cursor: pointer;
+}
+
+.header .container .search .icon img {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: #fff;
+}
+
+.header .container .qrCode {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.header .container .qrCode .icon {
+    display: flex;
+}
+
+.header .container .qrCode .icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+.header .container .language {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.header .container .language #lang {
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.header .container .user {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.header .container .cart {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.header .container .cart .text {
+    text-align: center;
+}
+
+.header .container .cart .text span {
+    padding: 0 .8rem;
+    background: #fff;
+    color: #000;
+    border-radius: 1rem;
+}
+
+.menu {
+    background: #000;
+}
+
+.menu .container {
+    padding: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .container .dropdown {
+    padding: 0.5rem 1rem;
+
+    flex: 0 0 15rem;
+    display: flex;
+    gap: 0.5rem;
+
+    border: 2px solid #fff;
+    border-radius: 2rem;
+}
+
+.menu .container .dropdown #categories {
+    flex: 1 0 auto;
+    background: black;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.menu .container .dropdown .icon {
+    display: flex;
+}
+
+.menu .container .dropdown .icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.menu .container .menu-item {
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.menu .container .menu-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.menu .container .menu-item.active {
+    color: rgb(237, 8, 8);
+    font-weight: 700;
+}
+
+.menu .container .menu-item.drop {
+    position: relative;
+}
+
+.menu .container .menu-item.drop .dropdown-list {
+    position: absolute;
+    bottom: -3.5rem;
+    left: 0;
+    padding: 1rem;
+
+    opacity: 0;
+
+    color: #000;
+    background: #fff;
+    box-shadow: 0 0 7px 0 #c6c6c6;
+    border-radius: 2rem;
+    transition: all .5s;
+}
+
+.menu .container .menu-item.drop:hover .dropdown-list {
+    opacity: 1;
+}
+
+.menu .container .menu-item.drop .dropdown-list a {
+    color: #000;
+}
+
+@media (max-width: 1130px) {
+    .menu .container .menu-item.drop .dropdown-list {
+        left: -1rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header .container .qrCode .text,
+    .header .container .user .text,
+    .header .container .cart .text {
+        display: none;
+    }
+
+    .menu .container .menu-item:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .header .container .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu .container .menu-item:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+    .header .container .search {
+        display: none;
+    }
+
+}
+
+@media (max-width: 578px) {
+    .menu .container .menu-item {
+        display: none;
+    }
+    .menu .container .menu-item:last-child {
+        display: block;
+    }
+
+}
